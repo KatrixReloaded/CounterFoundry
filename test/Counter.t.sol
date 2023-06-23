@@ -16,12 +16,12 @@ contract CounterTest is Test {
         assertEq(counter.count(), 1);
     }
 
-    function testFailDec() public { 
+    function testFailDec() public {
         //failing test case, any type of error will pass this test function
         counter.dec();
     }
 
-    function testDecUnderflow() public { 
+    function testDecUnderflow() public {
         //expect a specific type of error to pass this test function
         vm.expectRevert(stdError.arithmeticError);
         counter.dec();
