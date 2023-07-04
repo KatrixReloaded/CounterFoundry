@@ -37,4 +37,9 @@ contract TimeTest is Test {
         rewind(10); //decrement current timestamp
         assertEq(block.timestamp, t+100-10);
     }
+
+    function testBlockNumber() public {
+        vm.roll(999);
+        assertEq(block.number, 999);
+    }
 }
