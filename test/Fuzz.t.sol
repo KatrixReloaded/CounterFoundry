@@ -31,6 +31,7 @@ contract FuzzTest is Test {
         //assume - if false, the fuzzer will discard the current fuzz inputs and start a new fuzz run
         //skip x = 0
         //vm.assume(x>0);
+        //assertGt(x, 0);
 
         //bound(input, min, max) - bound input between min and max
         x = bound(x, 1, 10);
